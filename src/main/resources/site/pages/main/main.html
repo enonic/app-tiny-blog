@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--link rel="stylesheet" href=""-->
+</head>
+
+<body>
+    <header>
+        <h1>Site header</h1>
+    </header>
+    <div data-portal-region="main">
+        <h2>Example page header</h2>
+        <div data-th-if="${mainRegion}" data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
+            <div data-portal-component="${component.path}" data-th-remove="tag"></div>
+        </div>
+    </div>
+    <footer>
+        Created by Persijn <a></a>pkw@enonic.com
+    </footer>
+</body>
+
+</html>

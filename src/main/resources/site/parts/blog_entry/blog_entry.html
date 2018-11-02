@@ -1,0 +1,8 @@
+<div class="blog-container">
+    <div data-th-each="blog_post : ${ blog_entries }">
+        <!--img data-th-href="${ blog_post.blogurl }" data-th-alt="${ img description }" alt="should be removed" /-->
+        <div>
+            <p data-th-utext="${ blog_post.data.blog_text }" data-th-remove-tag="tag">Should be removed</p>
+        </div>
+    </div>
+</div>
