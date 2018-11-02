@@ -1,0 +1,10 @@
+= Tiny blog
+Persijn Kwekkeboom <pkw@enonic.com>
+
+A blog module that displayes a blog post. + 
+Seperate parts for a single blog + 
+Each blog gets its own page with url + 
+
+_Current version:_ *_0.0.1_* +
+
+Created for enonic xp platform + 
