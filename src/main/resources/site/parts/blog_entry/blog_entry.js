@@ -8,14 +8,9 @@ exports.get = function (req) {
     // Get the content that is using the page
     var content = portal.getContent();
 
-
-    log.info("test");
-
     var blog_folder = contentLib.get({
         key: portal.getSite()._path + "/blog-posts",
     });
-
-    log.info("blog_folder");
 
     if (!blog_folder) {
         blog_folder = contentLib.create({
@@ -31,7 +26,15 @@ exports.get = function (req) {
         key: blog_folder._path,
     });
 
-    log.info(JSON.stringify(blog_entries, null, 2));
+    //get the content studio key
+    //Create a url for each image
+    for (var i = 0; i < blog_entries.count; i++) {
+        var key = blog_entries.hits[i].data.blog_img;
+        blog_entries.hits[i].data.blog_img_url = portal.imageUrl({
+            id: key,
+            scale: "width(200)",
+        });
+    }
 
     // Prepare the model that will be passed to the view
     var model = {
