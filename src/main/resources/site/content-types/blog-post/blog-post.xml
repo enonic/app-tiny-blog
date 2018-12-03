@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <content-type>
     <display-name>Blog post</display-name>
     <super-type>base:structured</super-type>
     <form>
-        <input type="imageSelector" name="blog_img">
+        <input type="imageSelector" name="image">
             <label>Blog head</label>
             <occurrences minimum="0" maximum="1"/>
         </input>
-        <!--input type="TextLine" name="headline">
-            <label>Blog headline</label>
-            <occurrences minimum="1" maximum="1"/>
-        </input-->
-        <input type="HtmlArea"  name="blog_text">
+        <input type="TextLine" name="alt-text">
+            <label>Image alternative text</label>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="HtmlArea"  name="content">
             <label>Blog text</label>
             <occurences minimum="1" maximum="1" />
         </input>

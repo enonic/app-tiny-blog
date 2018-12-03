@@ -2,9 +2,19 @@
 Persijn Kwekkeboom <pkw@enonic.com>
 
 A blog module that displayes a blog post. + 
-Seperate parts for a single blog + 
-Each blog gets its own page with url + 
 
-_Current version:_ *_0.0.1_* +
+Two parts: +
+
+* *Blog-overview* +
+Is the main part of the app. +
+Used to create a list of all blog posts.
+The posts that are displayed are all children of type blog post.
+
+* *Blog-show* +
+Part to show a a single blog post. +
+Created to show a preview, not to be used on a live page. +
+Use this to create a template page for all plog posts. +
+
+_Current version:_ *_0.0.2_* +
 
 Created for enonic xp platform + 

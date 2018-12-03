@@ -1,0 +1,16 @@
+<section class="blog-overview">
+    <h2>Blog overview</h2>
+    <div data-th-each="post : ${blogposts}" data-th-remove="tag">
+        <div class="blog-post">
+            <div class="blog-header">
+                <img data-th-if="${post.data.image_url}" 
+                    data-th-src="${post.data.image_url}" 
+                    data-th-alt="${post.data['alt-text']}" />
+                <h2 class="blog-title"data-th-text="${post.displayName}"></h2>
+                <span class="blog-subtitle" data-th-text="${ post.data.date }">DD:MM:YY</span>
+            </div>
+            <div class="blog-content" data-th-utext="${post.data.content}"></div>
+        </div>
+        <!--/*End post*/-->
+    </div>
+</section>

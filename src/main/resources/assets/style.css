@@ -1,5 +1,22 @@
-/*
 
-Should on affect blog posts and its site
+.blog-overview {
+    margin: 0px 40px;
+}
 
-*/
+.blog-post {
+    margin: 50px 0px 50px 0px;
+    padding: 10px;
+    border: 2px solid lightgray;
+}
+
+.blog-header {
+    margin-bottom: 20px;
+}
+
+.blog-title {
+    margin: 0;
+}
+
+.blog-subtitle {
+    font-size: 0.8em;
+}
