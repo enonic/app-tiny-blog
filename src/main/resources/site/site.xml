@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config/>
+    <config>
+        <input name="overviewTitle" type="textLine">
+            <label>Override blog title?</label>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+    </config>
 </site>

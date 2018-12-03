@@ -1,5 +1,5 @@
 <section class="blog-overview">
-    <h2>Blog overview</h2>
+    <h2 data-th-text="${title}"></h2>
     <div data-th-each="post : ${blogposts}" data-th-remove="tag">
         <div class="blog-post">
             <div class="blog-header">

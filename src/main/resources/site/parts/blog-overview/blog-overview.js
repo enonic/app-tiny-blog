@@ -16,8 +16,6 @@ function createModel() {
             app.name + ":blog-post",
         ],
     });
-
-    //log.info(JSON.stringify(blog.hits[0], null, 2));
     
     //Go over all images and add the url
     for (var i = 0; i < blog.hits.length; i++) {
@@ -46,10 +44,18 @@ function createModel() {
         }
     }
 
+    //Page title fallback //TODO override title
+    var siteconfig = portal.getSiteConfig();
+    var title = content.displayName;
+    if (siteconfig != null && siteconfig.overviewTitle) {
+        title = siteconfig.overviewTitle;
+    }
+
     //log.info(JSON.stringify({}));
 
     var config = {
-        blogposts: blog.hits
+        blogposts: blog.hits,
+        title: title
     }
 
     return config;
@@ -64,12 +70,10 @@ function formatDate(dateString, seperator) {
     }
     var outString = "";
 
-    outString += date.getMinutes() + ":" + date.getHours() + " ";
+    outString += date.getHours() + ":" + date.getMinutes() + " ";
     outString += date.getDate() + seperator;
     outString += (date.getMonth() + 1) + seperator;
     outString += date.getFullYear();
-
-    log.info(outString);
 
     return outString;
 }
