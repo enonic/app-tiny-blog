@@ -16,7 +16,7 @@ function createModel() {
             app.name + ":blog-post",
         ],
     });
-    
+
     //Go over all images and add the url
     for (var i = 0; i < blog.hits.length; i++) {
         var data = blog.hits[i].data;
@@ -44,7 +44,7 @@ function createModel() {
         }
     }
 
-    //Page title fallback //TODO override title
+    //Page title fallback
     var siteconfig = portal.getSiteConfig();
     var title = content.displayName;
     if (siteconfig != null && siteconfig.overviewTitle) {
@@ -69,8 +69,10 @@ function formatDate(dateString, seperator) {
         seperator = "/";
     }
     var outString = "";
+    var hours = ('0' + date.getHours()).slice(-2);
+    var minutes = ('0' + date.getMinutes()).slice(-2);
 
-    outString += date.getHours() + ":" + date.getMinutes() + " ";
+    outString += hours + ":" + minutes + " ";
     outString += date.getDate() + seperator;
     outString += (date.getMonth() + 1) + seperator;
     outString += date.getFullYear();

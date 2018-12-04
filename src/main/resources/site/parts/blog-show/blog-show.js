@@ -26,8 +26,6 @@ exports.get = function (req) {
 
     content.data.content = portal.processHtml({ value: data.content });
 
-    log.info(JSON.stringify(content.data.content));
-
     //Data used on page
     var model = {
         post: content,

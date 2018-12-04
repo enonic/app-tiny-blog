@@ -1,15 +1,18 @@
 <section class="blog-overview">
-    <h2 data-th-text="${title}"></h2>
+    <h2 data-th-text="${title}" tab-index="0"></h2>
     <div data-th-each="post : ${blogposts}" data-th-remove="tag">
         <div class="blog-post">
             <div class="blog-header">
-                <img data-th-if="${post.data.image_url}" 
+                <img tab-index="0" 
+                    data-th-if="${post.data.image_url}" 
                     data-th-src="${post.data.image_url}" 
                     data-th-alt="${post.data['alt-text']}" />
-                <h2 class="blog-title"data-th-text="${post.displayName}"></h2>
-                <span class="blog-subtitle" data-th-text="${ post.data.date }">DD:MM:YY</span>
+                <h3 class="blog-title" tab-index="0"
+                    data-th-text="${post.displayName}"></h3>
+                <time class="blog-subtitle" data-th-text="${ post.data.date }">MM:HH DD/MM/YY</time>
             </div>
-            <div class="blog-content" data-th-utext="${post.data.content}"></div>
+            <div class="blog-content" tab-index="0" 
+                data-th-utext="${post.data.content}"></div>
         </div>
         <!--/*End post*/-->
     </div>

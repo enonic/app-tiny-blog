@@ -10,13 +10,13 @@
 }
 
 .blog-header {
-    margin-bottom: 20px;
 }
 
 .blog-title {
-    margin: 0;
+    margin: 10px 0px 0px 0px;
 }
 
 .blog-subtitle {
     font-size: 0.8em;
+    margin-bottom: 10px;
 }
