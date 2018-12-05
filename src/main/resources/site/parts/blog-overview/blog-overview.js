@@ -11,6 +11,7 @@ function createModel() {
     var blog = contentLib.query({
         start: 0,
         count: 150,
+        sort: "publish.from DESC, modifiedTime DESC",
         query: "_path LIKE '/content" + content._path + "/*'",
         contentTypes: [
             app.name + ":blog-post",
