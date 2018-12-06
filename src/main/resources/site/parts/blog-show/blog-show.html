@@ -1,7 +1,12 @@
 <div class="blog-post">
     <div class="blog-header">
-        <img data-th-if="${post.data.image_url}" data-th-src="${post.data.image_url}" data-th-alt="${post.data['alt-text']}" />
-        <h2 data-th-text="${post.displayName}"></h2>
+        <img data-th-if="${post.data.image_url}" 
+            data-th-src="${post.data.image_url}" 
+            data-th-alt="${post.data['alt-text']}" />
+        <h3 class="blog-title" tabindex="0"
+            data-th-text="${post.displayName}"></h3>
+        <time class="blog-subtitle" data-th-text="${ post.data.date }">MM:HH DD/MM/YYYY</time>
     </div>
-    <div class="blog-content" data-th-utext="${post.data.content}"></div>
+    <div class="blog-content"
+        data-th-utext="${post.data.content}"></div>
 </div>

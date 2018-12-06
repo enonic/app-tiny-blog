@@ -3,17 +3,16 @@
     <div data-th-each="post : ${blogposts}" data-th-remove="tag">
         <div class="blog-post">
             <div class="blog-header">
-                <img tab-index="0" 
+                <img tabindex="0"
                     data-th-if="${post.data.image_url}" 
                     data-th-src="${post.data.image_url}" 
                     data-th-alt="${post.data['alt-text']}" />
-                <h3 class="blog-title" tab-index="0"
+                <h3 class="blog-title" tabindex="0"
                     data-th-text="${post.displayName}"></h3>
-                <time class="blog-subtitle" data-th-text="${ post.data.date }">MM:HH DD/MM/YY</time>
+                <time class="blog-subtitle" data-th-text="${ post.data.date }">MM:HH DD/MM/YYYY</time>
             </div>
-            <div class="blog-content" tab-index="0" 
+            <div class="blog-content"
                 data-th-utext="${post.data.content}"></div>
         </div>
-        <!--/*End post*/-->
     </div>
 </section>
