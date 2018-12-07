@@ -13,7 +13,7 @@ exports.get = function (req) {
     if (data.image) {
         var url = portal.imageUrl({
             id: data.image,
-            scale: "width(700)",
+            scale: "width(1000)",
         });
         content.data.image_url = url;
 

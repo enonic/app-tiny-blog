@@ -25,7 +25,7 @@ function createModel() {
         if (data.image) {
             var url = portal.imageUrl({
                 id: data.image,
-                scale: "width(700)",
+                scale: "width(1000)",
             });
             blog.hits[i].data.image_url = url;
 
@@ -70,10 +70,10 @@ function formatDate(dateString, seperator) {
         seperator = "/";
     }
     var outString = "";
-    var hours = ('0' + date.getHours()).slice(-2);
-    var minutes = ('0' + date.getMinutes()).slice(-2);
+    //var hours = ('0' + date.getHours()).slice(-2);
+    //var minutes = ('0' + date.getMinutes()).slice(-2);
 
-    outString += hours + ":" + minutes + " ";
+    //outString += hours + ":" + minutes + " ";
     outString += date.getDate() + seperator;
     outString += (date.getMonth() + 1) + seperator;
     outString += date.getFullYear();

@@ -1,7 +1,7 @@
 <section class="blog-overview">
     <h2 data-th-text="${title}" tab-index="0"></h2>
     <div data-th-each="post : ${blogposts}" data-th-remove="tag">
-        <div class="blog-post">
+        <div class="blog-post" tabindex="0">
             <div class="blog-header">
                 <img tabindex="0"
                     data-th-if="${post.data.image_url}" 
