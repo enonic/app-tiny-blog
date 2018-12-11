@@ -3,7 +3,7 @@
     <display-name>Blog post</display-name>
     <super-type>base:structured</super-type>
     <form>
-        <input type="imageSelector" name="image">
+        <input type="ImageSelector" name="image">
             <label>Blog head</label>
             <occurrences minimum="0" maximum="1"/>
         </input>
