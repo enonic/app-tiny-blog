@@ -3,8 +3,6 @@ var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf library
 var contentLib = require('/lib/xp/content');
 
 function createModel() {
-    var site = portal.getSite();
-
     var content = portal.getContent();
 
     //query select all blog entries under this content.
@@ -36,13 +34,19 @@ function createModel() {
             }
         }
 
-        blog.hits[i].data.content = portal.processHtml({ value: data.content });
+
+        blog.hits[i].blogUrl = portal.pageUrl({ id: blog.hits[i]._id });
+
+        //Content is only shown on single page
+        //blog.hits[i].data.content = portal.processHtml({ value: data.content });
 
         if (blog.hits[i].publish.from) {
             blog.hits[i].data.date = formatDate(blog.hits[i].publish.from);
         } else {
             blog.hits[i].data.date = formatDate(blog.hits[i].modifiedTime);
         }
+
+
     }
 
     //Page title fallback
@@ -57,7 +61,7 @@ function createModel() {
     var config = {
         blogposts: blog.hits,
         title: title
-    }
+    };
 
     return config;
 }

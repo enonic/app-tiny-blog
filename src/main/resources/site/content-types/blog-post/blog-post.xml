@@ -15,5 +15,10 @@
             <label>Blog text</label>
             <occurences minimum="1" maximum="1" />
         </input>
+        <input type="TextArea" name="overviewText">
+            <label>Blog post overview text</label>
+            <max-length>500</max-length>
+            <occurences minimum="1" maximum="1" />
+        </input>
     </form>
 </content-type>
