@@ -1,0 +1,40 @@
+= Tiny blog usage
+
+== How to use the parts
+
+When installing the application you get two new parts.
+
+* *Blog-overview* +
+Is the main part of the app. +
+This displayes a teaser to all articles.
+The articles that are displayed are all the child elements of type blog-post. +
+All the different articles have a link to its article from the overview.
+
+* *Blog-show* +
+Part to show a single blog post. +
+Created to show a preview, not to be used on a live page. +
+Recommended this to create a template page for all plog posts. +
+
+* *Blog-post* +
+Content-type to be used with blog show. +
+With this you write the blog body, add images etc.
+
+
+
+== Setup in content studio.
+
+There are multiple ways to use this application. +
+I'll go through the most used setup. +
+
+* Overview +
+In content studio create a blog page, and insert the blog-overview part +
+Note* Overview is not mandatory, but makes it easier to browse articles. + 
+* Blog-post temlate page +
+Next step is createing a new template page. Create a new template with a page controller +
+and insert the blog-show part somwhere in the template. Usually you want it to be easy to see. +
+before saving don't forget to set the supported type to blog-post. +
+* Blog-post +
+Now you can create a new blog-post under the overview. +
+After you have fille in all the blog-post fields and pressed save the page should render with the correct template. +
+If it does not you have to manually set the template on the right side in content studio. + 
+And done, you have a finished blog-post both displayed in its own page, and in the overview.

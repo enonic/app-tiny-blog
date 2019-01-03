@@ -1,0 +1,79 @@
+= Tiny blog styling
+
+The tiny blog does not have a lot of styling on it (See bottom of page).
+
+== Blog show & overview
+
+=== Blog show
+The markdown of the blog-show part:
+
+[source, html]
+----
+<article class="blog-post">
+    <header class="blog-header">
+        <img />
+        <h2 class="blog-title" tabindex="0" ></h2>
+        <time class="blog-subtitle" >MM:HH DD/MM/YYYY</time>
+    </header>
+    <div class="blog-content"></div>
+</article>
+----
+
+Note* The top img element is optional (Not included if there is no image).
+
+=== Blog overview
+
+The blog overview show a teaser of the blog post. +
+Each article has its own link to the article page.
+
+[source, html]
+----
+<section class="blog-overview">
+    <h2 tab-index="0"></h2>
+    <article class="blog-post" tabindex="0">
+        <div class="blog-header">
+            <img tabindex="0" />
+            <h3 class="blog-title" tabindex="0"></h3>
+            <time class="blog-subtitle">DD/MM/YYYY</time>
+        </div>
+        <div class="blog-content"></div>
+        <a href="[Link to article]">read more</a>
+    </article>
+</section>
+----
+
+The h2 text is configurable in the application settings. (Site application)
+
+The blog-overview and blog-show have simular markup but not identical.
+
+Its recommended to use the same stylesheet and styles for both blog-show and blog-overview if possible.
+
+
+
+== Default style
+
+There is a very limited amout of styling that is default included in the application:
+
+[source, css]
+----
+.blog-overview {
+    margin: 0px 40px;
+}
+
+.blog-post {
+    margin: 50px 0px 50px 0px;
+    padding: 10px;
+    border: 2px solid lightgray;
+}
+
+.blog-title {
+    margin: 10px 0px 0px 0px;
+}
+
+.blog-subtitle {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+----
+
+The default styles are present to set it

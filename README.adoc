@@ -1,20 +1,16 @@
 = Tiny blog
 Persijn Kwekkeboom <pkw@enonic.com>
 
-A blog module that displayes a blog post. + 
+This is a blog application for enonic xp + 
 
-Two parts: +
+This will let you create blog articles. +
 
-* *Blog-overview* +
-Is the main part of the app. +
-Used to create a list of all blog posts.
-The posts that are displayed are all children of type blog post.
+Setting up the blog link:docs/usage.adoc[How to use?] +
+Setup is easy but, just follow the usage documentation.
 
-* *Blog-show* +
-Part to show a a single blog post. +
-Created to show a preview, not to be used on a live page. +
-Use this to create a template page for all plog posts. +
+And this for styling: link:docs/style.adoc[Apply style] +
+The default styles are a bare minimum, you should apply your own ontop or override.
 
-_Stable version:_ *_V0.1.0_* +
+_Stable version:_ *_V0.1.1_* +
 
-Created for enonic xp platform + 
+enonic xp platform app + 
