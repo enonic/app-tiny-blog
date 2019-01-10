@@ -1,4 +1,6 @@
 plugins {
+    id 'maven'
+    id 'com.enonic.defaults' version '1.0.3'
     id 'com.enonic.xp.app' version '1.2.0'
 }
 
@@ -25,6 +27,6 @@ repositories {
     xp.enonicRepo()
 }
 
-task wrapper(type: Wrapper) {
+wrapper {
 	gradleVersion = '4.10.2'
 }
