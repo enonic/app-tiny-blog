@@ -8,9 +8,9 @@ This will let you create blog articles. +
 Setting up the blog link:docs/usage.adoc[How to use?] +
 Setup is easy but, just follow the usage documentation.
 
-And this for styling: link:docs/style.adoc[Apply style] +
-The default styles are a bare minimum, you should apply your own ontop or override.
+The app has a default style (css) if you wish to apply your own style you can turn of the default style in the app configuration on your site.
+See the style documentation if you want to apply your own style: link:docs/style.adoc[Apply style] +
 
-_Stable version:_ *_V0.1.1_* +
+_Stable version:_ *_V1.0.0_* +
 
 enonic xp platform app + 

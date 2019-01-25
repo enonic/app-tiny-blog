@@ -1,17 +1,12 @@
 <section class="blog-overview">
     <h2 data-th-text="${title}" tab-index="0"></h2>
-    <div data-th-each="post : ${blogposts}" data-th-remove="tag">
-        <article class="blog-post" tabindex="0">
-            <div class="blog-header">
-                <img tabindex="0" 
-                    data-th-if="${post.data.image_url}" 
-                    data-th-src="${post.data.image_url}" 
-                    data-th-alt="${post.data['alt-text']}" />
-                <h3 class="blog-title" tabindex="0" data-th-text="${post.displayName}"></h3>
-                <time class="blog-subtitle" data-th-text="${ post.data.date }">DD/MM/YYYY</time>
-            </div>
-            <div class="blog-content" data-th-utext="${ post.data.overviewText }"></div>
-            <a data-th-href="${ post.blogUrl }">read more</a>
-        </article>
-    </div>
+    <article class="blog-post" data-th-each="post : ${blogposts}" tabindex="0">
+        <div class="blog-header">
+            <img tabindex="0" data-th-if="${post.data.image_url}" data-th-src="${post.data.image_url}" data-th-alt="${post.data['alt-text']}" />
+            <h3 class="blog-title" tabindex="0" data-th-text="${post.displayName}"></h3>
+            <time class="blog-subtitle" data-th-text="${ post.data.date }">DD/MM/YYYY</time>
+        </div>
+        <div class="blog-content" data-th-utext="${ post.data.overviewText }"></div>
+        <a class="blog-link" data-th-href="${ post.blogUrl }">read more</a>
+    </article>
 </section>

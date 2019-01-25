@@ -93,15 +93,19 @@ exports.get = function (req) {
     var model = createModel();
     var view = resolve('blog-overview.html');
 
+    var addition = [];
+    var pageConfig = portal.getSiteConfig();
+    if (pageConfig.defaultStyle) {
+        addition.push('<link rel="stylesheet" href="' + css + '" />');
+    }
+
     //Body rendered page. Append stylesheet to head.
     return {
         body: thymeleaf.render(view, model),
         pageContributions: {
-            headBegin: [
-                '<link rel="stylesheet" href="' + css + '" />',
-            ],
+            headBegin: addition,
         }
-    }
+    };
 };
 
 
