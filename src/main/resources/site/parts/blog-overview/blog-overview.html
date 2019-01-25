@@ -4,9 +4,9 @@
         <div class="blog-header">
             <img tabindex="0" data-th-if="${post.data.image_url}" data-th-src="${post.data.image_url}" data-th-alt="${post.data['alt-text']}" />
             <h3 class="blog-title" tabindex="0" data-th-text="${post.displayName}"></h3>
-            <time class="blog-subtitle" data-th-text="${ post.data.date }">DD/MM/YYYY</time>
+            <time class="blog-subtitle" tabindex="0" data-th-text="${ post.data.date }">DD/MM/YYYY</time>
         </div>
-        <div class="blog-content" data-th-utext="${ post.data.overviewText }"></div>
+        <div class="blog-content" tabindex="0" data-th-utext="${ post.data.overviewText }"></div>
         <a class="blog-link" data-th-href="${ post.blogUrl }">read more</a>
     </article>
 </section>
