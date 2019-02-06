@@ -52,15 +52,24 @@ function createModel() {
     //Page title fallback
     var siteconfig = portal.getSiteConfig();
     var title = content.displayName;
-    if (siteconfig != null && siteconfig.overviewTitle) {
-        title = siteconfig.overviewTitle;
-    }
+    var showheader = true;
 
-    //log.info(JSON.stringify({}));
+    var blogConfig = siteconfig.blogConfig;
+    if (siteconfig != null && blogConfig) {
+        var selected = blogConfig._selected;
+        log.info(selected);
+        if (typeof selected !== "undefined") {
+            title = blogConfig[selected].header || content.displayName;
+        }
+        else {
+            showheader = false;
+        }
+    }
 
     var config = {
         blogposts: blog.hits,
-        title: title
+        showheader: showheader,
+        title: title,
     };
 
     return config;

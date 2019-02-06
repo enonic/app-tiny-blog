@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
     <config>
-        <input name="overviewTitle" type="textLine">
-            <label>Override blog title?</label>
-            <occurrences minimum="0" maximum="1"/>
-        </input>
+
+        <option-set name="blogConfig">
+            <label>Blog configuration</label>
+            <expanded>true</expanded>
+            <occurrences minimum="1" maximum="1"/>
+            <help-text>Settings for the tiny-blog application</help-text>
+            <options minimum="0" maximum="1">
+                <option name="showHeader">
+                    <label>Show headline</label>
+                    <help-text>Shows the display name of blog-overview part</help-text>
+                    <default>true</default>
+                    <items>
+                        <input type="textLine" name="header">
+                            <label>Set header text (defaults to content name)</label>
+                            <help-text>Sets a custom header text on the overview. Default shows the content studio content name</help-text>
+                            <occurrences minimum="0" maximum="1"/>
+                        </input>
+                    </items>
+                </option>
+            </options>
+        </option-set>
         <input type="CheckBox" name="defaultStyle">
             <label>Use default style</label>
             <occurrences minimum="0" maximum="1"/>
@@ -12,5 +29,6 @@
             <help-text>If you have your own styling turn this off</help-text>
             <occurrences minimum="1" maximum="1"/>
         </input>
+
     </config>
 </site>

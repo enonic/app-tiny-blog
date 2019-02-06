@@ -3,12 +3,19 @@ Persijn Kwekkeboom <pkw@enonic.com>
 
 This is a blog application for enonic xp + 
 
-This will let you create blog articles. +
+This will let you create blog articles and includes an overview off all blog articles +
 
 Setting up the blog link:docs/usage.adoc[How to use?] +
 Setup is easy but, just follow the usage documentation.
 
-The app has a default style (css) if you wish to apply your own style you can turn of the default style in the app configuration on your site.
+The app has settings you can change: +
+
+* There is a default style you can turn off.
+* You can turn of the default heading included in the overview part
+* The title on the overview can be customized in the settings.
+
+Settings are located on the app. Content studio -> "your site" -> Applications.
+
 See the style documentation if you want to apply your own style: link:docs/style.adoc[Apply style] +
 
 _Stable version:_ *_V1.0.0_* +

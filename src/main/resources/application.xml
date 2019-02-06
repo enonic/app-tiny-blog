@@ -1,3 +1,5 @@
 <application>
-    <description>A tiny blog for enonic XP</description>
+    <description>
+        An application that lets you create blog articles.
+    </description>
 </application>
