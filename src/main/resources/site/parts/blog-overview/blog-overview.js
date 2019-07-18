@@ -1,5 +1,5 @@
 var portal = require('/lib/xp/portal'); // Import the portal library
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf library
+var thymeleaf = require('/lib/thymeleaf'); // Import the Thymeleaf library
 var contentLib = require('/lib/xp/content');
 
 function createModel() {
@@ -57,7 +57,7 @@ function createModel() {
     var blogConfig = siteconfig.blogConfig;
     if (siteconfig != null && blogConfig) {
         var selected = blogConfig._selected;
-        log.info(selected);
+        
         if (typeof selected !== "undefined") {
             title = blogConfig[selected].header || content.displayName;
         }

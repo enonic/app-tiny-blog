@@ -1,5 +1,5 @@
-var portal = require('/lib/xp/portal'); // Import the portal library
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf library
+var portal = require('/lib/xp/portal');
+var thymeleaf = require('/lib/thymeleaf');
 var contentLib = require('/lib/xp/content');
 
 // Handle the GET request
@@ -39,9 +39,9 @@ exports.get = function (req) {
     return {
         body: thymeleaf.render(view, model),
         pageContributions: {
-            headBegin: [
+            headEnd: [
                 '<link rel="stylesheet" href="' + css + '" />',
             ],
         }
-    }
+    };
 };

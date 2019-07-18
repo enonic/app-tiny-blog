@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content-type>
     <display-name>Blog post</display-name>
+    <description>All info related to a blog post</description>
     <super-type>base:structured</super-type>
     <form>
         <input type="ImageSelector" name="image">
