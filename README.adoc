@@ -6,7 +6,7 @@ This is a blog application for enonic xp +
 This will let you create blog articles and includes an overview off all blog articles +
 
 Setting up the blog link:docs/usage.adoc[How to use?] +
-Setup is easy but, just follow the usage documentation.
+Setup is easy, just follow the usage documentation.
 
 The app has settings you can change: +
 
@@ -18,6 +18,6 @@ Settings are located on the app. Content studio -> "your site" -> Applications.
 
 See the style documentation if you want to apply your own style: link:docs/style.adoc[Apply style] +
 
-_Stable version:_ *_V1.0.0_* +
+_Stable version:_ *_V2.0.0_* +
 
 enonic xp platform app + 
