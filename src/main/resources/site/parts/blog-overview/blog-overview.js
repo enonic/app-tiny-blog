@@ -1,21 +1,10 @@
 var portal = require('/lib/xp/portal'); // Import the portal library
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf library
 var contentLib = require('/lib/xp/content');
-var nodeLib = require('/lib/xp/node');
-var contextLib = require('/lib/xp/context');
 
 function createModel() {
     var content = portal.getContent();
-    var context = contextLib.get();
-
-    var repo = nodeLib.connect({
-        repoId: "cms-repo",
-        branch: context.branch,
-    });
-
-    var node = repo.get(content._id);
-
-    var childOrder = node._childOrder || "publish.from DESC, modifiedTime DESC";
+    var childOrder = content.childOrder || "publish.from DESC, modifiedTime DESC";
 
     //query select all blog entries under this content.
     var blog = contentLib.query({
