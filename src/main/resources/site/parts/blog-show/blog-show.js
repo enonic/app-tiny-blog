@@ -7,6 +7,7 @@ exports.get = function (req) {
 
     // Get the content that is using the page
     var content = portal.getContent();
+    var siteConfig = portal.getSiteConfig();
 
     var data = content.data;
     //Images
@@ -29,19 +30,23 @@ exports.get = function (req) {
     //Data used on page
     var model = {
         post: content,
-    }
+    };
 
     //What html document to use
     var view = resolve('blog-show.html');
     var css = portal.assetUrl({ path: "style.css" });
+    var style = "";
+    if (siteConfig.defaultStyle) {
+        style = '<link rel="stylesheet" href="' + css + '" />';
+    }
 
     // Return the merged view and model in the response object
     return {
         body: thymeleaf.render(view, model),
         pageContributions: {
             headBegin: [
-                '<link rel="stylesheet" href="' + css + '" />',
+                style
             ],
         }
-    }
+    };
 };

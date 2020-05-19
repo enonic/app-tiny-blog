@@ -1,15 +1,27 @@
 var portal = require('/lib/xp/portal'); // Import the portal library
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf library
 var contentLib = require('/lib/xp/content');
+var nodeLib = require('/lib/xp/node');
+var contextLib = require('/lib/xp/context');
 
 function createModel() {
     var content = portal.getContent();
+    var context = contextLib.get();
+
+    var repo = nodeLib.connect({
+        repoId: "cms-repo",
+        branch: context.branch,
+    });
+
+    var node = repo.get(content._id);
+
+    var childOrder = node._childOrder || "publish.from DESC, modifiedTime DESC";
 
     //query select all blog entries under this content.
     var blog = contentLib.query({
         start: 0,
         count: 150,
-        sort: "publish.from DESC, modifiedTime DESC",
+        sort: childOrder,
         query: "_path LIKE '/content" + content._path + "/*'",
         contentTypes: [
             app.name + ":blog-post",
@@ -57,7 +69,6 @@ function createModel() {
     var blogConfig = siteconfig.blogConfig;
     if (siteconfig != null && blogConfig) {
         var selected = blogConfig._selected;
-        log.info(selected);
         if (typeof selected !== "undefined") {
             title = blogConfig[selected].header || content.displayName;
         }
