@@ -1,0 +1,5 @@
+kind: "Application"
+title: "Tiny blog"
+description: "An application that lets you create blog articles."
+vendorName: "Enonic AS"
+vendorUrl: "http://enonic.com"

@@ -1,0 +1,29 @@
+kind: "ContentType"
+superType: "base:structured"
+title: "Blog post"
+description: "All info related to a blog post"
+form:
+  - type: "ImageSelector"
+    name: "image"
+    label: "Blog head"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "TextLine"
+    name: "alt-text"
+    label: "Image alternative text"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "HtmlArea"
+    name: "content"
+    label: "Blog text"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "TextArea"
+    name: "overviewText"
+    label: "Blog post overview text"
+    occurrences:
+      min: 0
+      max: 1

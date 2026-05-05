@@ -1,0 +1,35 @@
+kind: "CMS"
+form:
+  - type: "OptionSet"
+    name: "blogConfig"
+    expanded: true
+    label: "Blog configuration"
+    helpText: "Settings for the tiny-blog application"
+    occurrences:
+      min: 1
+      max: 1
+    options:
+      - name: "showHeader"
+        label: "Show headline"
+        helpText: "Shows the display name of blog-overview part"
+        selected: true
+        items:
+          - type: "TextLine"
+            name: "header"
+            label: "Set header text (defaults to content name)"
+            helpText: "Sets a custom header text on the overview. Default shows the\
+              \ content studio content name"
+            occurrences:
+              min: 0
+              max: 1
+    selection:
+      min: 0
+      max: 1
+  - type: "CheckBox"
+    name: "defaultStyle"
+    label: "Use default style"
+    helpText: "If you have your own styling turn this off"
+    occurrences:
+      min: 0
+      max: 1
+    default: "checked"
