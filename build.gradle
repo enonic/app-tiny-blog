@@ -10,6 +10,7 @@ dependencies {
     include xplibs.content
     include xplibs.portal
     include "com.enonic.lib:lib-thymeleaf:3.0.0-SNAPSHOT"
+    include "com.enonic.lib:lib-asset:2.0.0-SNAPSHOT"
 }
 
 repositories {

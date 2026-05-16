@@ -1,4 +1,5 @@
 var portal = require('/lib/xp/portal'); // Import the portal library
+var assetLib = require('/lib/enonic/asset'); // Import the asset library
 var thymeleaf = require('/lib/thymeleaf'); // Import the Thymeleaf library
 var contentLib = require('/lib/xp/content');
 
@@ -97,7 +98,7 @@ function formatDate(dateString, seperator) {
 // Handle the GET request
 exports.get = function (req) {
 
-    var css = portal.assetUrl({ path: "style.css" });
+    var css = assetLib.assetUrl({ path: "style.css" });
 
     var model = createModel();
     var view = resolve('blog-overview.html');
