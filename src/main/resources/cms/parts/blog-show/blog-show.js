@@ -1,4 +1,5 @@
 var portal = require('/lib/xp/portal');
+var assetLib = require('/lib/enonic/asset');
 var thymeleaf = require('/lib/thymeleaf');
 var contentLib = require('/lib/xp/content');
 
@@ -33,7 +34,7 @@ exports.get = function (req) {
 
     //What html document to use
     var view = resolve('blog-show.html');
-    var css = portal.assetUrl({ path: "style.css" });
+    var css = assetLib.assetUrl({ path: "style.css" });
 
     // Return the merged view and model in the response object
     return {
